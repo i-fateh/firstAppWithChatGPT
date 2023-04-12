@@ -19,13 +19,12 @@ const ImageSlider = ({ imageSources, delays }) => {
   }, [currentIndex, delays, imageSources]);
 
   return (
-    <Image
-      className={styles.imgBanner} 
-      src={currentSource}
-      alt='tech'
-      width={500}
-      height={500}
-    />
+      <Image
+        src={currentSource}
+        alt='tech'
+        width={300}
+        height={300}
+      />
   );
 };
 
@@ -60,7 +59,6 @@ export default function Home() {
       <div className={styles.container}>
         <div className={styles.imageContainer}>
           <Image
-            className={styles.imgBanner} 
             src="/sekigan.png"
             alt='tech'
             width={500}
