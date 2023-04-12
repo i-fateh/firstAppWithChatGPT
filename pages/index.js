@@ -75,7 +75,7 @@ export default function Home() {
         by Me and ChatGPT</h1>
         
         <p className={styles.paragraphe}>
-        "J'ai créé ce projet afin de découvrir ChatGPT et d'apprendre à l'utiliser.
+        &quot;J'ai créé ce projet afin de découvrir ChatGPT et d'apprendre à l'utiliser.
         L'objectif était de concevoir une application en NextJS sans coder, juste à l'aide des prompts.
         <br/>
         Après quelques essais j'ai rapidement compris que mieux on sait lui demander, mieux il saura nous répondre.
@@ -85,7 +85,7 @@ export default function Home() {
         Et ce malgré les maintes reformulation de mes demandes restées sans résultat probant.
         <br/>
         <br/>
-        Tout n'est pas parfait, mais il faut reconnaitre qu'il est puissant 🔥 🚀"
+        Tout n'est pas parfait, mais il faut reconnaitre qu'il est puissant 🔥 🚀&quot;
         <br/>
         <br/>
         Fateh
