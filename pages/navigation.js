@@ -1,8 +1,14 @@
 import Link from 'next/link';
 import styles from '../styles/Navigation.module.css';
 import Head from 'next/head'
+import { useMediaQuery } from '@material-ui/core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHouse, faEnvelope, faImage, faUserAstronaut } from '@fortawesome/free-solid-svg-icons';
+
 
 const Navigation = () => {
+  const isSmallScreen = useMediaQuery('(max-width: 600px)');
+
   return (
     <div>
       <Head>
@@ -15,27 +21,62 @@ const Navigation = () => {
       <ul>
         <li>
           <Link href="/" legacyBehavior>
-            <a style={{fontWeight:500}}>Fake Project Agency</a>
+              {isSmallScreen ? (
+                <a style={{fontWeight:500}}>
+                  
+                  </a>
+              ) : (
+                <a style={{fontWeight:500}}>
+                Fake Project Agency</a>
+              )}
           </Link>
         </li>
         <li>
-          <Link href="/" legacyBehavior>
-            <a>Accueil</a>
+        <Link href="/" legacyBehavior>
+              {isSmallScreen ? (
+                <a style={{fontWeight:500}}>
+                  <FontAwesomeIcon icon={faHouse} />
+                </a>
+              ) : (
+                <a style={{fontWeight:500}}>
+                Accueil</a>
+              )}
           </Link>
         </li>
         <li>
           <Link href="/about" legacyBehavior>
-            <a>A propos</a>
+          {isSmallScreen ? (
+                <a style={{fontWeight:500}}>
+                  <FontAwesomeIcon icon={faUserAstronaut} />
+                  </a>
+              ) : (
+                <a style={{fontWeight:500}}>
+                A propos</a>
+              )}
           </Link>
         </li>
         <li>
           <Link href="/gallery" legacyBehavior>
-            <a>Portfolio</a>
+          {isSmallScreen ? (
+                <a style={{fontWeight:500}}>
+                  <FontAwesomeIcon icon={faImage} />
+                  </a>
+              ) : (
+                <a style={{fontWeight:500}}>
+                Portfolio</a>
+              )}
           </Link>
         </li>
         <li>
           <Link href="/contact" legacyBehavior>
-            <a>Contact</a>
+          {isSmallScreen ? (
+                <a style={{fontWeight:500}}>
+                    <FontAwesomeIcon icon={faEnvelope} />
+                  </a>
+              ) : (
+                <a style={{fontWeight:500}}>
+                Contact</a>
+              )}
           </Link>
         </li>
       </ul>
