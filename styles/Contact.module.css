@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  background: #000000;
+  color: white;
+  padding: 60px 30px;
+}
+
+.h1 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-size: 5em;
+  text-align: center;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #9400d3, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.paragraphe {
+  font-size: 1.7em;
+  font-weight: 200;
+  text-align: center;
+  width: 90%;
+  max-width: 700px;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.socialIcons a {
+  display: inline-block;
+  margin: 0 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.socialIcons a:hover {
+  transform: scale(1.2);
+}
+
+.socialIcons img {
+  width: 50px;
+  height: 50px;
+}
+
+.card__avatar {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.border {
+  position: absolute;
+  width: 220px;
+  height: 200px;
+  background: linear-gradient(to right, rgb(111, 1, 111), rgb(255, 0, 115));
+  animation: rotate 5s infinite, pulse 4s linear infinite;
+
+  z-index: 1;
+  border-radius: 50%;
+  opacity: .6;
+}
+
+.border2 {
+  position: absolute;
+  width: 240px;
+  height: 200px;
+  background: linear-gradient(to right, rgb(64, 0, 64), rgb(255, 0, 136));
+  animation: rotate 5s infinite;
+  animation-delay: 1s;
+  z-index: 1;
+  border-radius: 50%;
+  opacity: .5;
+}
+
+.card__avatar img {
+  width: 300px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .h1 {
+    font-size: 3em;
+    text-align: left;
+  }
+
+  .paragraphe {
+    font-size: 1.5em;
+    text-align: left;
+    width: 90%;
+    max-width: 950px;
+  }
+}

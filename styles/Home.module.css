@@ -1,116 +1,259 @@
 .container {
-  padding: 0 2rem;
-}
-
-.main {
+  display: flex;
+  position: relative;
+  width: 100%;
   min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  background: #000000;
+  color: white;
+  padding: 60px 30px;
 }
 
-.footer {
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.imageContainer img {
+  display: block;
+  z-index: 99;
+  width: 300px;
+  height: auto;
+  position: relative; margin-left: calc(50% - 150px);
+}
+
+.halo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8);
+  animation: pulse 2s infinite, change-color 10s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8);
+    width: 0;
+    height: 0;
+  }
+  50% {
+    box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.8);
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    opacity: 0.8;
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    width: 0;
+    height: 0;
+  }
+}
+
+/*Ajouter le code suivant*/
+@keyframes change-color {
+  0% {
+    background-color: #ff3f3f;
+    opacity: 0.6;
+  }
+  20% {
+    background-color: #ff983f;
+    opacity: 0.6;
+  }
+  40% {
+    background-color: #f9ff3f;
+    opacity: 0.6;
+  }
+  60% {
+    background-color: #3fff4f;
+    opacity: 0.6;
+  }
+  80% {
+    background-color: #3f7aff;
+    opacity: 0.6;
+  }
+  100% {
+    background-color: #c13fff;
+    opacity: 0.6;
+  }
+}
+
+.h1 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-size: 5em;
+  text-align: center;
+  margin: 8rem 0 2rem 0;
+  background: linear-gradient(90deg, #9400d3, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bigH1 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-size: 5em;
+  width: 70%;
+  text-align: center;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #4c01b4, #d300cf, #feaaff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1em;
+}
+
+.paragraphe {
+  font-size: 1.7em;
+  font-weight: 200;
+  text-align: center;
+  width: 90%;
+  max-width: 950px;
+}
+
+.banner {
+  width: 100%;
+  overflow: hidden;
+  padding: 40px 0px 100px 0px;
+  background-color: black;
+  position: relative;
+}
+
+.bannerImages {
   display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+  flex-wrap:wrap;
+  position: relative;
 }
 
-.footer a {
+.bannerImages:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  z-index: 1;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+
+.bannerImages:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  z-index: 1;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  transform:rotate(180deg)
+}
+
+.bannerImages:before {
+  left: 0;
+}
+
+.bannerImages:after {
+  right: 0;
+}
+
+.bannerImages img {
+  width: calc(100%/4);
+  max-height: 450px;
+  object-fit: cover;
+}
+
+.bannerImages > .imgSlider {
+  width: calc(100%/4);
+  max-height: 450px;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.sliderImageVisible {
+  opacity: 1;
+}
+
+
+.masonryGrid {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+  width: 60%;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-top: 30px;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.masonryItem {
+  width: 32%;
+  margin-bottom: 20px;
+  position: relative;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.masonryItem img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 0 0 5px 5px;
+  box-sizing: border-box;
   text-align: center;
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
+@media screen and (max-width: 768px) {
+  .masonryGrid {
+    width: 90%;
+  }
+  
+  .masonryItem {
+    width: 90%;
+  }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
+  .bigH1, .h1 {
+    font-size: 2.5em;
+    text-align: left;
     width: 100%;
-    flex-direction: column;
+  }
+
+  .paragraphe {
+    font-size: 1.5em;
+    text-align: left;
+    width: 90%;
+    max-width: 950px;
+  }
+
+  .bannerImages img {
+    width: calc(100%/2);
+    max-height: 450px;
+    object-fit: cover;
+  }
+  
+  .bannerImages > .imgSlider {
+    width: calc(100%/2);
+    max-height: 450px;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .masonryItem {
+    width: 100%;
   }
 }
