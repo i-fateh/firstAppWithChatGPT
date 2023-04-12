@@ -136,6 +136,7 @@ export default function Gallery() {
         @media screen and (max-width: 768px) {
           img {
             width:100%;
+            height:auto;
             border-radius:5px
           }
         }
