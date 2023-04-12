@@ -49,38 +49,38 @@ export default function Gallery() {
       <div className="gallery">
         <div className="gallery-row">
           <div className="gallery-img-container" onClick={() => handleImageClick('https://source.unsplash.com/480x480/?web,code-programming')}>
-            <img src="https://source.unsplash.com/480x480/?web,code-programming" className={styles.aspectImage} width={300} height={300} alt="Tech image" />
+            <img src="https://source.unsplash.com/480x480/?web,code-programming" className={styles.aspectImage} alt="Tech image" />
 
           </div>
           <div className="gallery-img-container" onClick={() => handleImageClick('https://source.unsplash.com/480x480/?web,tech')} >
-            <img src="https://source.unsplash.com/480x480/?web,tech" className={styles.aspectImage} width={300} height={300} alt="Tech image" />
+            <img src="https://source.unsplash.com/480x480/?web,tech" className={styles.aspectImage} alt="Tech image" />
           </div>
           <div className="gallery-img-container" onClick={() => handleImageClick('https://source.unsplash.com/480x480/?web,data-analytics')}>
-            <img src="https://source.unsplash.com/480x480/?web,data-analytics" className={styles.aspectImage} width={300} height={300} alt="Tech image" />
+            <img src="https://source.unsplash.com/480x480/?web,data-analytics" className={styles.aspectImage} alt="Tech image" />
           </div>
         </div>
 
         <div className="gallery-row">
           <div className="gallery-img-container" onClick={() => handleImageClick('https://source.unsplash.com/480x480/?web,cybersecurity')}>
-            <img src="https://source.unsplash.com/480x480/?web,cybersecurity" className={styles.aspectImage} width={300} height={300} alt="Tech image" />
+            <img src="https://source.unsplash.com/480x480/?web,cybersecurity" className={styles.aspectImage} alt="Tech image" />
           </div>
           <div className="gallery-img-container" onClick={() => handleImageClick('https://source.unsplash.com/480x480/?web,virtual-reality-augmented-reality')}>
-          <img src="https://source.unsplash.com/480x480/?web,virtual-reality-augmented-reality" className={styles.aspectImage} width={300} height={300} alt="Tech image" />
+          <img src="https://source.unsplash.com/480x480/?web,virtual-reality-augmented-reality" className={styles.aspectImage} alt="Tech image" />
           </div>
           <div className="gallery-img-container" onClick={() => handleImageClick('https://source.unsplash.com/480x480/?web,social-media-communication')}>
-          <img src="https://source.unsplash.com/480x480/?web,social-media-communication" className={styles.aspectImage} width={300} height={300} alt="Tech image" />
+          <img src="https://source.unsplash.com/480x480/?web,social-media-communication" className={styles.aspectImage} alt="Tech image" />
           </div>
         </div>
 
         <div className="gallery-row">
           <div className="gallery-img-container" onClick={() => handleImageClick('https://source.unsplash.com/480x480/?web,artificial-intelligence-ai')}>
-          <img src="https://source.unsplash.com/480x480/?web,artificial-intelligence-ai" className={styles.aspectImage} width={300} height={300} alt="Tech image" />
+          <img src="https://source.unsplash.com/480x480/?web,artificial-intelligence-ai" className={styles.aspectImage} alt="Tech image" />
           </div>
           <div className="gallery-img-container" onClick={() => handleImageClick('https://source.unsplash.com/480x480/?web,computer-infrastructure')}>
-          <img src="https://source.unsplash.com/480x480/?web,computer-infrastructure" className={styles.aspectImage} width={300} height={300} alt="Tech image" />
+          <img src="https://source.unsplash.com/480x480/?web,computer-infrastructure" className={styles.aspectImage} alt="Tech image" />
           </div>
           <div className="gallery-img-container" onClick={() => handleImageClick('https://source.unsplash.com/480x480/?web,electronics-gadgets')}>
-          <img src="https://source.unsplash.com/480x480/?web,electronics-gadgets" className={styles.aspectImage} width={300} height={300} alt="Tech image" />
+          <img src="https://source.unsplash.com/480x480/?web,electronics-gadgets" className={styles.aspectImage} alt="Tech image" />
           </div>
         </div>
         
@@ -113,6 +113,11 @@ export default function Gallery() {
           justify-content: center;
           align-items: center;
         }
+
+        img {
+          width:330px;
+          border-radius:10px
+        }
         .gallery-img-container {
           cursor: pointer;
           margin:10px;
@@ -122,11 +127,17 @@ export default function Gallery() {
           justify-content: center;
           align-items: center;
           height: 100%; 
-         
         }
         .modal-image-container img {
           width: 100%;
           height: 100%;
+        }
+
+        @media screen and (max-width: 768px) {
+          img {
+            width:100%;
+            border-radius:5px
+          }
         }
       `}
     </style>
