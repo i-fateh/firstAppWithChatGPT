@@ -3,6 +3,7 @@ import Navigation from './navigation'
 import Footer from './footer'
 import { useEffect, useState } from 'react';
 import MasonryComponent from './masonry';
+import Image from 'next/image'
 
 const ImageSlider = ({ imageSources, delays }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -18,32 +19,38 @@ const ImageSlider = ({ imageSources, delays }) => {
   }, [currentIndex, delays, imageSources]);
 
   return (
-    <img src={currentSource} alt="" />
+    <Image
+      className={styles.imgBanner} 
+      src={currentSource}
+      alt='tech'
+      width={500}
+      height={500}
+    />
   );
 };
 
-const images1 = ['./img1.jpeg', './img2.jpeg', './img3.jpeg', './img4.jpeg', './img5.png', './img7.jpeg', './img8.png', './img9.jpeg'];
+const images1 = ['/img1.jpeg', '/img2.jpeg', '/img3.jpeg', '/img4.jpeg', '/img5.png', '/img7.jpeg', '/img8.png', '/img9.jpeg'];
 const delays1 = [5000, 5000, 5000, 5000, 5000, 5000, 5000, 5000];
 
-const images2 = ['./img2.jpeg', './img3.jpeg', './img4.jpeg', './img5.png', './img7.jpeg', './img8.png', './img9.jpeg', './img1.jpeg'];
+const images2 = ['/img2.jpeg', '/img3.jpeg', '/img4.jpeg', '/img5.png', '/img7.jpeg', '/img8.png', '/img9.jpeg', '/img1.jpeg'];
 const delays2 = [9000, 9000, 9000, 9000, 9000, 9000, 9000, 9000];
 
-const images3 = ['./img3.jpeg', './img4.jpeg', './img5.png', './img7.jpeg', './img8.png', './img9.jpeg', './img1.jpeg', './img2.jpeg'];
+const images3 = ['/img3.jpeg', '/img4.jpeg', '/img5.png', '/img7.jpeg', '/img8.png', '/img9.jpeg', '/img1.jpeg', '/img2.jpeg'];
 const delays3 = [7000, 7000, 7000, 7000, 7000, 7000, 7000, 7000];
 
-const images4 = ['./img4.jpeg', './img5.png', './img7.jpeg', './img8.png', './img9.jpeg', './img9.jpeg', './img2.jpeg', './img3.jpeg'];
+const images4 = ['/img4.jpeg', '/img5.png', '/img7.jpeg', '/img8.png', '/img9.jpeg', '/img9.jpeg', '/img2.jpeg', '/img3.jpeg'];
 const delays4 = [10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000];
 
-const images5 = ['./img5.png', './img7.jpeg', './img8.png', './img9.jpeg', './img1.jpeg', './img9.jpeg', './img3.jpeg', './img4.jpeg'];
+const images5 = ['/img5.png', '/img7.jpeg', '/img8.png', '/img9.jpeg', '/img1.jpeg', '/img9.jpeg', '/img3.jpeg', '/img4.jpeg'];
 const delays5 = [15000, 15000, 15000, 15000, 15000, 15000, 15000, 15000];
 
-const images6 = ['./img7.jpeg', './img8.png', './img9.jpeg', './img1.jpeg', './img2.jpeg', './img9.jpeg', './img4.jpeg', './img5.png'];
+const images6 = ['/img7.jpeg', '/img8.png', '/img9.jpeg', '/img1.jpeg', '/img2.jpeg', '/img9.jpeg', '/img4.jpeg', '/img5.png'];
 const delays6 = [8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000];
 
-const images7 = ['./img8.png', './img9.jpeg', './img1.jpeg', './img2.jpeg', './img3.jpeg', './img9.jpeg', './img5.png', './img7.jpeg'];
+const images7 = ['/img8.png', '/img9.jpeg', '/img1.jpeg', '/img2.jpeg', '/img3.jpeg', '/img9.jpeg', '/img5.png', '/img7.jpeg'];
 const delays7 = [3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000];
 
-const images8 = ['./img9.jpeg', './img1.jpeg', './img2.jpeg', './img3.jpeg', './img4.jpeg', './img9.jpeg', './img7.jpeg', './img8.png'];
+const images8 = ['/img9.jpeg', '/img1.jpeg', '/img2.jpeg', '/img3.jpeg', '/img4.jpeg', '/img9.jpeg', '/img7.jpeg', '/img8.png'];
 const delays8 = [5000, 5000, 5000, 5000, 5000, 5000, 5000, 5000];
 
 export default function Home() {
@@ -52,7 +59,13 @@ export default function Home() {
       <Navigation />
       <div className={styles.container}>
         <div className={styles.imageContainer}>
-          <img className={styles.imgBanner} src="./sekigan.png" alt="Ma super image" />
+          <Image
+            className={styles.imgBanner} 
+            src="/sekigan.png"
+            alt='tech'
+            width={500}
+            height={500}
+          />
           <div className={styles.halo}></div>
         </div>
         <h1 className={styles.bigH1}>First app created

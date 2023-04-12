@@ -1,6 +1,7 @@
 import Navigation from './navigation'
 import Footer from './footer'
 import styles from '../styles/About.module.css'
+import Image from 'next/image'
 
 function About() {
     return (
@@ -20,9 +21,24 @@ function About() {
 
         <div className={styles.banner}>
           <div className={styles.bannerImages}>
-            <img src="./img1.jpeg" alt="" />
-            <img src="./img2.jpeg" alt="" />
-            <img src="./img3.jpeg" alt="" />
+            <Image
+              src="/img1.jpeg"
+              alt='tech'
+              width={500}
+              height={500}
+            />
+            <Image
+              src="/img2.jpeg"
+              alt='tech'
+              width={500}
+              height={500}
+            />
+            <Image
+              src="/img3.jpeg"
+              alt='tech'
+              width={500}
+              height={500}
+            />
           </div>
         </div>
 
@@ -33,14 +49,63 @@ function About() {
         </p>
         <div className={styles.bannerStack}>
           <div className={styles.bannerStackImages}>
-            <img src="./html5.png" alt="" />
-            <img src="./css.png" alt="" />
-            <img src="./js.png" alt="" />
-            <img src="./react.png" alt="" />
-            <img src="./next.png" alt="" />
-            <img src="./node.png" alt="" />
-            <img src="./express.png" alt="" />
-            <img src="./mongo.png" alt="" />
+
+            <Image
+              src="/html5.png"
+              alt="html5"
+              width={100}
+              height={100}
+            />
+
+            <Image
+              src="/css.png"
+              alt="CSS3"
+              width={100}
+              height={100}
+            />
+
+            <Image
+              src="/js.png"
+              alt="javascript"
+              width={100}
+              height={100}
+            />
+
+            <Image
+              src="/react.png"
+              alt="react js"
+              width={100}
+              height={100}
+            />
+
+            <Image
+              src="/next.png"
+              alt="next js"
+              width={100}
+              height={100}
+            />
+            
+            <Image
+              src="/node.png"
+              alt="node js"
+              width={100}
+              height={100}
+            />
+            
+
+            <Image
+              src="/express.png"
+              alt="express js"
+              width={100}
+              height={100}
+            />            
+                        
+            <Image
+              src="/mongo.png"
+              alt="mongo db"
+              width={100}
+              height={100}
+            />
           </div>
         </div>
 
@@ -52,9 +117,24 @@ function About() {
 
         <div className={styles.banner}>
           <div className={styles.bannerImages}>
-            <img src="./img3.jpeg" alt="" />
-            <img src="./img4.jpeg" alt="" />
-            <img src="./img1.jpeg" alt="" />
+            <Image
+              src="/img4.jpeg"
+              alt='tech'
+              width={500}
+              height={500}
+            />
+            <Image
+              src="/img5.png"
+              alt='tech'
+              width={500}
+              height={500}
+            />
+            <Image
+              src="/img7.jpeg"
+              alt='tech'
+              width={500}
+              height={500}
+            />
           </div>
         </div>
 
