@@ -75,17 +75,17 @@ export default function Home() {
         by Me and ChatGPT</h1>
         
         <p className={styles.paragraphe}>
-        &quot;J'ai créé ce projet afin de découvrir ChatGPT et d'apprendre à l'utiliser.
-        L'objectif était de concevoir une application en NextJS sans coder, juste à l'aide des prompts.
+        &quot;J&apos;ai créé ce projet afin de découvrir ChatGPT et d&apos;apprendre à l&apos;utiliser.
+        L&apos;objectif était de concevoir une application en NextJS sans coder, juste à l&apos;aide des prompts.
         <br/>
-        Après quelques essais j'ai rapidement compris que mieux on sait lui demander, mieux il saura nous répondre.
+        Après quelques essais j&apos;ai rapidement compris que mieux on sait lui demander, mieux il saura nous répondre.
         <br/>
         <br/>
-        J'ai tout de même plusieurs fois été contraint de corriger (au minimum) le code pour que ça fonctionne.
+        J&apos;ai tout de même plusieurs fois été contraint de corriger (au minimum) le code pour que ça fonctionne.
         Et ce malgré les maintes reformulation de mes demandes restées sans résultat probant.
         <br/>
         <br/>
-        Tout n'est pas parfait, mais il faut reconnaitre qu'il est puissant 🔥 🚀&quot;
+        Tout n&apos;est pas parfait, mais il faut reconnaitre qu&apos;il est puissant 🔥 🚀&quot;
         <br/>
         <br/>
         Fateh
@@ -109,16 +109,16 @@ export default function Home() {
     
         <h1 className={styles.h1}>Audit SEO</h1>
         <p className={styles.paragraphe}>
-        Nous effectuons une analyse approfondie de votre site web pour identifier les opportunités d'optimisation pour les moteurs de recherche. Nous examinons la structure de votre site, le contenu, les mots-clés, les liens entrants, les erreurs techniques, et plus encore.
+        Nous effectuons une analyse approfondie de votre site web pour identifier les opportunités d&apos;optimisation pour les moteurs de recherche. Nous examinons la structure de votre site, le contenu, les mots-clés, les liens entrants, les erreurs techniques, et plus encore.
         <br/>
         <br />
         Nous mènons une recherche approfondie pour trouver les meilleurs mots-clés pour votre entreprise. Nous identifions les termes de recherche que vos clients utilisent pour trouver des produits ou services similaires aux vôtres, et les intégrons dans votre site web.
         <br/>
-        Nous optimisons chaque page de votre site web pour les moteurs de recherche. Nous optimisons les titres de page, les descriptions, les en-têtes, les balises d'images, les méta-données et les URL pour maximiser la visibilité de votre site web dans les résultats de recherche.
+        Nous optimisons chaque page de votre site web pour les moteurs de recherche. Nous optimisons les titres de page, les descriptions, les en-têtes, les balises d&apos;images, les méta-données et les URL pour maximiser la visibilité de votre site web dans les résultats de recherche.
         Nous ajustons en permanence la stratégie de référencement pour garantir des résultats optimaux.
         </p>  
 
-        <h1 className={styles.h1}>Domaines d'expertise</h1>
+        <h1 className={styles.h1}>Domaines d&apos;expertise</h1>
         <MasonryComponent />
 
         <h1 className={styles.h1}>Stratégie de contenu</h1>
