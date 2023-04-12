@@ -14,7 +14,7 @@ function Contact() {
           <div className={styles.border2}></div>
         </div>
 
-        <h1 className={styles.h1}>Contact us</h1>
+        <h1 className={styles.h1}>Nous contacter</h1>
         <p className={styles.paragraphe}>
           En choisissant Fake Project Agency, vous optez pour une agence de création de site internet et d'application web de confiance, qui vous aidera à atteindre vos objectifs en ligne et à vous démarquer de la concurrence. 
           <br/>
